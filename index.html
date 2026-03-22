@@ -3,9 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saransh Maurya - Portfolio</title>
+    <title>Portfolio - Saransh</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="index.html">Saransh</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/projects.html" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/education.html" class="nav-link">Education</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="fade-in">Hi, I'm Saransh</h1>
+                <p class="fade-in-delay">Full Stack Developer & Creative Technologist</p>
+                <p class="hero-description fade-in-delay-2">Crafting beautiful and interactive web experiences with modern technologies</p>
+                <div class="cta-buttons fade-in-delay-3">
+                    <a href="pages/projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="pages/about.html" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-element fade-in">
+                    <div class="shape shape-1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator fade-in-delay-3">
+        <span>Scroll to explore</span>
+        <div class="arrow">↓</div>
+    </div>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="featured-grid">
+                <div class="featured-card fade-in-up">
+                    <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+                    <h3>Project One</h3>
+                    <p>A modern web application built with cutting-edge technologies</p>
+                    <a href="pages/projects.html" class="card-link">View Project →</a>
+                </div>
+                <div class="featured-card fade-in-up">
+                    <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+                    <h3>Project Two</h3>
+                    <p>Interactive application with seamless user experience</p>
+                    <a href="pages/projects.html" class="card-link">View Project →</a>
+                </div>
+                <div class="featured-card fade-in-up">
+                    <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+                    <h3>Project Three</h3>
+                    <p>Full-stack solution with responsive design</p>
+                    <a href="pages/projects.html" class="card-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Saransh. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-link">GitHub</a>
+                <a href="#" class="social-link">LinkedIn</a>
+                <a href="#" class="social-link">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
