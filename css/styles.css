@@ -454,7 +454,83 @@ a:hover {
     margin-bottom: var(--spacing-md);
 }
 
+/* Skills Grid - Responsive */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
 /* Responsive Design */
+
+/* Extra Small Devices (max 600px) */
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .floating-element {
+        display: none;
+    }
+
+    .hero-text > p:nth-of-type(1) {
+        font-size: 1rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+
+    .cta-buttons {
+        gap: var(--spacing-sm);
+    }
+
+    .page-header {
+        min-height: 25vh;
+        padding: var(--spacing-md);
+    }
+
+    .featured-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .featured-card {
+        border-radius: 8px;
+    }
+
+    .featured-card h3 {
+        font-size: 1rem;
+    }
+
+    .featured-card p {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .card-link {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        min-width: 120px;
+    }
+
+    /* Responsive inline styles */
+    .skills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+}
 
 /* Tablet & Small Devices (720px) */
 @media (max-width: 720px) {
@@ -504,6 +580,15 @@ a:hover {
     .footer p {
         font-size: 0.85rem;
     }
+
+    /* Timeline responsiveness */
+    .timeline::before {
+        left: 10px;
+    }
+
+    .timeline-item::before {
+        left: 10px;
+    }
 }
 
 /* Mobile Devices (≤ 480px) */
@@ -551,6 +636,31 @@ a:hover {
 
     .nav-logo a {
         font-size: 1.2rem;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .timeline::before {
+        left: 5px;
+    }
+
+    .timeline-item::before {
+        left: 5px;
+    }
+
+    .certification-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .certification-card {
+        padding: 1.5rem;
+    }
+
+    .certification-icon {
+        font-size: 2.5rem;
     }
 }
 
