@@ -11,12 +11,17 @@ function setActiveNavLink() {
     const navLinks = document.querySelectorAll('.nav-link');
     
     navLinks.forEach(link => {
-        // Remove active class from all links
         link.classList.remove('active');
+        const href = link.getAttribute('href');
         
-        // Add active class to current page link
-        if (link.getAttribute('href') === currentLocation || 
-            (currentLocation === '/' && link.getAttribute('href') === 'index.html')) {
+        // Get the filename from both paths
+        const currentFile = currentLocation.split('/').pop() || 'index.html';
+        const linkFile = href.split('/').pop();
+        
+        // Match if filenames are the same
+        if (currentFile === linkFile || 
+            (currentFile === '' && linkFile === 'index.html') ||
+            (currentLocation === '/' && linkFile === 'index.html')) {
             link.classList.add('active');
         }
     });
@@ -49,22 +54,33 @@ function setupHamburgerMenu() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-            hamburger.classList.toggle('active');
-        });
-    }
+    if (!hamburger || !navMenu) return;
+    
+    // Toggle menu on hamburger click
+    hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
     
     // Close menu when a link is clicked
     const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
-            if (navMenu.style.display === 'flex') {
-                navMenu.style.display = 'none';
-                hamburger.classList.remove('active');
-            }
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
         });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        const isClickInsideNav = event.target.closest('.navbar');
+        const isMenuOpen = navMenu.classList.contains('active');
+        
+        if (!isClickInsideNav && isMenuOpen) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
     });
 }
 
