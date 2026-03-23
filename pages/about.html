@@ -3,7 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Saransh's Portfolio</title>
+    <meta name="description" content="About Saransh – Full Stack Developer passionate about building clean, functional web experiences.">
+    <meta name="author" content="Saransh">
+    <meta property="og:title" content="About Saransh – Full Stack Developer">
+    <meta property="og:description" content="Learn about my journey, skills, and philosophy on building web.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#faf7f2">
+    <link rel="canonical" href="https://saransh.dev/pages/about.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='20' font-size='20'>◆</text></svg>">
+    <title>About Me – Saransh</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/animations.css">
 </head>
@@ -28,6 +36,9 @@
                     <a href="education.html" class="nav-link">Education</a>
                 </li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-toggle-icon"></span>
+            </button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -40,96 +51,95 @@
     <section class="page-header">
         <div class="container">
             <h1 class="fade-in">About Me</h1>
-            <p class="fade-in-delay">Get to know me better</p>
+            <p class="page-header-subtitle fade-in-delay-1">I'm a full stack developer from India with a passion for building clean, functional, and beautiful web experiences.</p>
         </div>
     </section>
 
-    <!-- About Content -->
-    <section class="content-section">
-        <div class="container">
-            <div class="grid-2">
-                <div class="scroll-animate">
-                    <h2>Who I Am</h2>
-                    <p>Hi! I'm a passionate Full Stack Developer with a love for creating beautiful, functional web applications. With expertise in modern web technologies, I transform ideas into reality through clean, efficient code.</p>
-                    <p>I believe in continuous learning and staying updated with the latest industry trends. My journey in web development has been filled with exciting challenges and rewarding projects.</p>
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Who I Am -->
+        <section class="content-section fade-in-delay-2">
+            <h2>Who I Am</h2>
+            <p>I'm Saransh, a full stack developer with 5+ years of experience building web applications. I believe in writing clean code, thoughtful design, and shipping products that users actually enjoy using.</p>
+            <p>My journey into tech started with curiosity about how things work on the internet. Today, I combine technical expertise with design thinking to create digital products that solve real problems.</p>
+        </section>
+
+        <!-- Philosophy -->
+        <section class="content-section scroll-animate">
+            <h2>My Philosophy</h2>
+            <div class="philosophy-grid">
+                <div class="philosophy-item">
+                    <h3>User First</h3>
+                    <p>Every decision is guided by the user's needs. Clean interfaces, intuitive interactions, fast load times.</p>
                 </div>
-                <div class="scroll-animate">
-                    <h2>My Expertise</h2>
-                    <div class="card">
-                        <h3>Frontend Development</h3>
-                        <p>HTML, CSS, JavaScript, React, Responsive Design</p>
-                    </div>
-                    <div class="card">
-                        <h3>Backend Development</h3>
-                        <p>Node.js, Express, Python, Database Design, APIs</p>
-                    </div>
-                    <div class="card">
-                        <h3>Tools & Technologies</h3>
-                        <p>Git, Docker, AWS, Webpack, Firebase, MongoDB</p>
-                    </div>
+                <div class="philosophy-item">
+                    <h3>Quality Code</h3>
+                    <p>Well-structured, maintainable code that scales. I focus on clean architecture and best practices.</p>
+                </div>
+                <div class="philosophy-item">
+                    <h3>Continuous Learning</h3>
+                    <p>Technology evolves fast. I stay updated with modern frameworks, tools, and design patterns.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section class="content-section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
-        <div class="container">
-            <h2 class="section-title scroll-animate">Key Skills</h2>
+        <!-- Skills -->
+        <section class="content-section scroll-animate">
+            <h2>Skills & Expertise</h2>
             <div class="skills-grid">
-                <div class="card scroll-animate">
-                    <h3>Web Development</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="tag">React</span>
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">CSS3</span>
-                        <span class="tag">HTML5</span>
-                    </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <p>React, TypeScript, HTML5, CSS3, Vue.js, Next.js, Responsive Design, Web Performance</p>
                 </div>
-                <div class="card scroll-animate">
+                <div class="skill-category">
                     <h3>Backend</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="tag">Node.js</span>
-                        <span class="tag">Express</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">REST APIs</span>
-                        <span class="tag">GraphQL</span>
-                    </div>
+                    <p>Node.js, Express, JavaScript, Python, REST APIs, GraphQL, Database Design</p>
                 </div>
-                <div class="card scroll-animate">
-                    <h3>Databases</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                        <span class="tag">MongoDB</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">MySQL</span>
-                    </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <p>Git, Docker, AWS, PostgreSQL, MongoDB, Firebase, VS Code, Figma</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <p>Problem Solving, Communication, Collaboration, Project Management, Code Review</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="content-section">
-        <div class="container" style="text-align: center;">
-            <h2 class="scroll-animate">Let's Work Together</h2>
-            <p class="scroll-animate" style="font-size: 1.1rem; margin-bottom: 2rem;">Interested in collaborating? I'd love to hear about your project!</p>
-            <div class="scroll-animate" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="mailto:your-email@example.com" class="btn btn-primary">Send Me an Email</a>
-                <a href="../index.html" class="btn btn-secondary">Back to Home</a>
+        <!-- Beyond Code -->
+        <section class="content-section scroll-animate">
+            <h2>Beyond Code</h2>
+            <p>When I'm not coding, you'll find me:</p>
+            <ul class="interests-list">
+                <li>Writing about web development and technology</li>
+                <li>Contributing to open-source projects</li>
+                <li>Exploring UX/UI design principles</li>
+                <li>Playing chess and exploring strategy games</li>
+                <li>Reading about technology, psychology, and science</li>
+            </ul>
+        </section>
+
+        <!-- CTA -->
+        <section class="content-section scroll-animate">
+            <div class="cta-box">
+                <p>Interested in working together? Let's connect.</p>
+                <div class="cta-buttons">
+                    <a href="../pages/projects.html" class="btn btn-primary">View My Work</a>
+                    <a href="mailto:hello@saransh.dev" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Saransh. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">Twitter</a>
+        <div class="footer-container">
+            <p>&copy; 2026 Saransh. Built with vanilla HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://github.com/BuildWithSaransh" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                <a href="https://linkedin.com/in/saransh" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                <a href="https://twitter.com/saransh" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+                <a href="mailto:hello@saransh.dev" class="footer-link">Email</a>
             </div>
         </div>
     </footer>

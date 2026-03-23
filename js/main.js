@@ -3,7 +3,27 @@ document.addEventListener('DOMContentLoaded', function() {
     setActiveNavLink();
     setupScrollAnimations();
     setupHamburgerMenu();
+    setupThemeToggle();
 });
+
+// Theme Toggle Setup
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const root = document.documentElement;
+
+    // Load saved theme preference or default to 'light'
+    const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+    root.setAttribute('data-theme', savedTheme);
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const current = root.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            localStorage.setItem('portfolio-theme', next);
+        });
+    }
+}
 
 // Set Active Navigation Link
 function setActiveNavLink() {

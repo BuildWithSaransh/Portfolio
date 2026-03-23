@@ -3,150 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Education - Saransh's Portfolio</title>
+    <meta name="description" content="Education & Experience – Saransh. My academic background and professional journey.">
+    <meta name="author" content="Saransh">
+    <meta property="og:title" content="Education – Saransh">
+    <meta property="og:description" content="My academic background, certifications, and professional experience.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#faf7f2">
+    <link rel="canonical" href="https://saransh.dev/pages/education.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='20' font-size='20'>◆</text></svg>">
+    <title>Education – Saransh</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/animations.css">
-    <style>
-        /* Timeline Styles */
-        .timeline {
-            position: relative;
-            padding: 2rem 0;
-        }
-
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
-        }
-
-        .timeline-item {
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: 0;
-            margin-right: auto;
-            width: 45%;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: auto;
-            margin-right: 0;
-            width: 45%;
-            text-align: left;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            background: white;
-            border: 4px solid var(--primary-color);
-            border-radius: 50%;
-            top: 0;
-            z-index: 1;
-        }
-
-        .timeline-content {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .timeline-content:hover {
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px);
-        }
-
-        .timeline-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-date {
-            font-weight: 600;
-            color: var(--secondary-color);
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .timeline-description {
-            color: var(--text-light);
-            font-size: 0.95rem;
-        }
-
-        /* Responsive Timeline */
-        @media (max-width: 768px) {
-            .timeline::before {
-                left: 0;
-            }
-
-            .timeline-item::before {
-                left: 0;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content,
-            .timeline-item:nth-child(even) .timeline-content {
-                width: 100%;
-                margin-left: 30px;
-                margin-right: 0;
-                text-align: left;
-            }
-        }
-
-        /* Certifications */
-        .certification-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .certification-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-
-        .certification-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        .certification-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-
-        .certification-card h3 {
-            color: var(--primary-color);
-        }
-
-        .certification-card p {
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .certification-issuer {
-            color: var(--secondary-color);
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 <body>
     <!-- Navigation -->
@@ -169,6 +36,9 @@
                     <a href="education.html" class="nav-link active">Education</a>
                 </li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-toggle-icon"></span>
+            </button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -180,150 +50,160 @@
     <!-- Page Header -->
     <section class="page-header">
         <div class="container">
-            <h1 class="fade-in">Education & Certifications</h1>
-            <p class="fade-in-delay">My learning journey</p>
+            <h1 class="fade-in">Education & Experience</h1>
+            <p class="page-header-subtitle fade-in-delay-1">My academic background and professional journey.</p>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title scroll-animate">Academic Background</h2>
-            
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Work Experience -->
+        <section class="content-section fade-in-delay-2">
+            <h2>Work Experience</h2>
             <div class="timeline">
                 <div class="timeline-item scroll-animate">
-                    <div class="timeline-content">
-                        <h3>Bachelor of Technology in Computer Science</h3>
-                        <div class="timeline-date">2018 - 2022</div>
-                        <div class="timeline-description">
-                            University Name Here. Graduated with honors. Focus on web development, data structures, and algorithms. GPA: 3.8/4.0
-                        </div>
-                    </div>
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-title">Senior Full Stack Developer</div>
+                    <div class="timeline-description">Tech Company Inc. | Remote</div>
+                    <p class="timeline-content">Leading development of core platform features. Mentoring junior developers, architecting scalable solutions, and driving technical decisions.</p>
                 </div>
 
                 <div class="timeline-item scroll-animate">
-                    <div class="timeline-content">
-                        <h3>Senior Secondary School</h3>
-                        <div class="timeline-date">2016 - 2018</div>
-                        <div class="timeline-description">
-                            School Name Here. Completed higher secondary education with distinction. Majored in Science with Mathematics.
-                        </div>
-                    </div>
+                    <div class="timeline-date">2021 - 2023</div>
+                    <div class="timeline-title">Full Stack Developer</div>
+                    <div class="timeline-description">Digital Agency Co. | India</div>
+                    <p class="timeline-content">Built and maintained multiple web applications. Worked with React, Node.js, and PostgreSQL. Improved performance and reduced load times.</p>
                 </div>
 
                 <div class="timeline-item scroll-animate">
-                    <div class="timeline-content">
-                        <h3>Secondary School</h3>
-                        <div class="timeline-date">2006 - 2016</div>
-                        <div class="timeline-description">
-                            School Name Here. Completed secondary education with excellent academic performance in mathematics and science.
-                        </div>
-                    </div>
+                    <div class="timeline-date">2020 - 2021</div>
+                    <div class="timeline-title">Frontend Developer</div>
+                    <div class="timeline-description">Startup Labs | India</div>
+                    <p class="timeline-content">Developed responsive user interfaces with React. Collaborated with design team to implement pixel-perfect designs. Optimized bundle sizes.</p>
+                </div>
+
+                <div class="timeline-item scroll-animate">
+                    <div class="timeline-date">2019 - 2020</div>
+                    <div class="timeline-title">Junior Web Developer</div>
+                    <div class="timeline-description">Web Design Studio | India</div>
+                    <p class="timeline-content">Built websites using HTML, CSS, and JavaScript. Assisted senior developers in full-stack projects. Learned best practices and design patterns.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Certifications Section -->
-    <section class="content-section" style="background: linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%);">
-        <div class="container">
-            <h2 class="section-title scroll-animate">Certifications & Awards</h2>
-            
-            <div class="certification-grid">
-                <div class="certification-card scroll-animate">
-                    <div class="certification-icon">🎓</div>
+        <!-- Education -->
+        <section class="content-section scroll-animate">
+            <h2>Education</h2>
+            <div class="timeline">
+                <div class="timeline-item scroll-animate">
+                    <div class="timeline-date">2018 - 2022</div>
+                    <div class="timeline-title">Bachelor of Technology in Computer Science</div>
+                    <div class="timeline-description">University Name | India</div>
+                    <p class="timeline-content">Graduated with distinction. GPA: 3.8/4.0. Focus on web development, data structures, and algorithms. Completed several full-stack projects.</p>
+                </div>
+
+                <div class="timeline-item scroll-animate">
+                    <div class="timeline-date">2016 - 2018</div>
+                    <div class="timeline-title">Senior Secondary Education</div>
+                    <div class="timeline-description">School Name | India</div>
+                    <p class="timeline-content">Completed with distinction. Majored in Science with Mathematics. Strong foundation in physics, chemistry, and mathematics.</p>
+                </div>
+
+                <div class="timeline-item scroll-animate">
+                    <div class="timeline-date">2006 - 2016</div>
+                    <div class="timeline-title">Secondary Education</div>
+                    <div class="timeline-description">School Name | India</div>
+                    <p class="timeline-content">Excellent academic performance. Developed early interest in technology and problem-solving through science projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="content-section scroll-animate">
+            <h2>Certifications & Achievements</h2>
+            <div class="grid-3">
+                <div class="card">
                     <h3>React Developer Certification</h3>
-                    <p>Advanced React.js Course</p>
-                    <div class="certification-issuer">Udemy - 2023</div>
+                    <p>Advanced React.js and Modern Frontend Development</p>
+                    <p class="card-meta-date">Udemy • 2023</p>
                 </div>
-
-                <div class="certification-card scroll-animate">
-                    <div class="certification-icon">🔒</div>
-                    <h3>AWS Solutions Architect</h3>
-                    <p>AWS Certified Solutions Architect – Associate</p>
-                    <div class="certification-issuer">Amazon Web Services - 2023</div>
+                <div class="card">
+                    <h3>AWS Certified Associate Solutions Architect</h3>
+                    <p>Cloud infrastructure and AWS services</p>
+                    <p class="card-meta-date">Amazon Web Services • 2023</p>
                 </div>
-
-                <div class="certification-card scroll-animate">
-                    <div class="certification-icon">🚀</div>
-                    <h3>Full Stack Web Development</h3>
-                    <p>Complete Web Development Bootcamp</p>
-                    <div class="certification-issuer">Codecademy - 2022</div>
+                <div class="card">
+                    <h3>Full Stack Web Development Bootcamp</h3>
+                    <p>Complete web development and MERN stack</p>
+                    <p class="card-meta-date">Codecademy • 2022</p>
                 </div>
-
-                <div class="certification-card scroll-animate">
-                    <div class="certification-icon">🏆</div>
-                    <h3>Best Project Award</h3>
-                    <p>Innovation in Web Technology</p>
-                    <div class="certification-issuer">Tech Conference 2023</div>
-                </div>
-
-                <div class="certification-card scroll-animate">
-                    <div class="certification-icon">💻</div>
+                <div class="card">
                     <h3>JavaScript Mastery</h3>
-                    <p>Advanced JavaScript Programming</p>
-                    <div class="certification-issuer">Frontend Masters - 2023</div>
+                    <p>Advanced JavaScript programming patterns</p>
+                    <p class="card-meta-date">Frontend Masters • 2023</p>
                 </div>
-
-                <div class="certification-card scroll-animate">
-                    <div class="certification-icon">🎯</div>
+                <div class="card">
                     <h3>Data Structures & Algorithms</h3>
-                    <p>Mastering DSA in JavaScript</p>
-                    <div class="certification-issuer">Coursera - 2022</div>
+                    <p>DSA fundamentals and problem-solving</p>
+                    <p class="card-meta-date">Coursera • 2022</p>
+                </div>
+                <div class="card">
+                    <h3>Best Project Award</h3>
+                    <p>Innovation in Web Technology at Tech Conference</p>
+                    <p class="card-meta-date">Tech Conference 2023</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Development -->
-    <section class="content-section">
-        <div class="container">
-            <h2 class="section-title scroll-animate">Continuous Learning</h2>
-            <p class="scroll-animate" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">
-                I'm committed to staying updated with the latest technologies and industry practices. I regularly participate in online courses, workshops, and tech meetups.
-            </p>
-            <div class="skills-grid">
-                <div class="card scroll-animate">
-                    <h3>Currently Learning</h3>
-                    <ul style="list-style: none;">
-                        <li>✓ Machine Learning with Python</li>
-                        <li>✓ Web3 & Blockchain Development</li>
-                        <li>✓ DevOps & Cloud Infrastructure</li>
-                        <li>✓ Advanced TypeScript Patterns</li>
+        <!-- Continuous Learning -->
+        <section class="content-section scroll-animate">
+            <h2>Continuous Learning</h2>
+            <p>I'm committed to staying updated with the latest technologies and industry best practices. I regularly engage with:</p>
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-top: 1.5rem;">Learning Platforms</h3>
+                    <ul class="interests-list">
+                        <li>Udemy</li>
+                        <li>Coursera</li>
+                        <li>Frontend Masters</li>
+                        <li>Free Code Camp</li>
+                        <li>Development blogs and podcasts</li>
                     </ul>
                 </div>
-
-                <div class="card scroll-animate">
-                    <h3>Learning Platforms</h3>
-                    <ul style="list-style: none;">
-                        <li>✓ Udemy</li>
-                        <li>✓ Coursera</li>
-                        <li>✓ Frontend Masters</li>
-                        <li>✓ Free Code Camp</li>
-                    </ul>
-                </div>
-
-                <div class="card scroll-animate">
-                    <h3>Community Involvement</h3>
-                    <ul style="list-style: none;">
-                        <li>✓ Tech Meetups Attendee</li>
-                        <li>✓ Open Source Contributor</li>
-                        <li>✓ Blog Writer</li>
-                        <li>✓ Mentor for Beginners</li>
+                <div>
+                    <h3 style="margin-top: 1.5rem;">Current Focus Areas</h3>
+                    <ul class="interests-list">
+                        <li>Web Performance Optimization</li>
+                        <li>Advanced TypeScript Patterns</li>
+                        <li>DevOps & Cloud Infrastructure</li>
+                        <li>System Design</li>
+                        <li>AI/ML for web applications</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- CTA -->
+        <section class="content-section scroll-animate">
+            <div class="cta-box">
+                <p>Want to learn more or get in touch?</p>
+                <div class="cta-buttons">
+                    <a href="about.html" class="btn btn-primary">Learn More About Me</a>
+                    <a href="mailto:hello@saransh.dev" class="btn btn-secondary">Send Me an Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Saransh. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">Twitter</a>
+        <div class="footer-container">
+            <p>&copy; 2026 Saransh. Built with vanilla HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://github.com/BuildWithSaransh" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                <a href="https://linkedin.com/in/saransh" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                <a href="https://twitter.com/saransh" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+                <a href="mailto:hello@saransh.dev" class="footer-link">Email</a>
             </div>
         </div>
     </footer>

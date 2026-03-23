@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Saransh</title>
+    <meta name="description" content="Saransh – Full Stack Developer. I build things people enjoy using.">
+    <meta name="author" content="Saransh">
+    <meta property="og:title" content="Saransh – Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer. I build things people enjoy using.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://saransh.dev/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#faf7f2">
+    <link rel="canonical" href="https://saransh.dev">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg'><text y='20' font-size='20'>◆</text></svg>">
+    <title>Saransh – Full Stack Developer</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
 </head>
@@ -28,6 +38,9 @@
                     <a href="pages/education.html" class="nav-link">Education</a>
                 </li>
             </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                <span class="theme-toggle-icon"></span>
+            </button>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -39,50 +52,38 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="fade-in">Hi, I'm Saransh</h1>
-                <p class="fade-in-delay">Full Stack Developer & Creative Technologist</p>
-                <p class="hero-description fade-in-delay-2">Crafting beautiful and interactive web experiences with modern technologies</p>
-                <div class="cta-buttons fade-in-delay-3">
-                    <a href="pages/projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="pages/about.html" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-element fade-in">
-                    <div class="shape shape-1"></div>
-                </div>
+            <span class="hero-eyebrow fade-in">Full Stack Developer</span>
+            <h1 class="fade-in-delay-1">I build things<br>people enjoy using.</h1>
+            <p class="hero-description fade-in-delay-2">Crafting web experiences that combine clean design with functional engineering. Based in India, building for the world.</p>
+            <p class="hero-stack fade-in-delay-2">React · Node.js · TypeScript · UI Design · PostgreSQL</p>
+            <div class="hero-cta fade-in-delay-3">
+                <a href="pages/projects.html" class="btn btn-primary">View My Work</a>
+                <a href="pages/about.html" class="btn btn-secondary">About Me</a>
             </div>
         </div>
     </section>
 
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator fade-in-delay-3">
-        <span>Scroll to explore</span>
-        <div class="arrow">↓</div>
-    </div>
-
-    <!-- Featured Section -->
-    <section class="featured">
+    <!-- Featured Projects -->
+    <section>
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title">Featured Work</h2>
             <div class="featured-grid">
-                <div class="featured-card fade-in-up">
-                    <div class="card-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-                    <h3>Project One</h3>
-                    <p>A modern web application built with cutting-edge technologies</p>
+                <div class="card scroll-animate">
+                    <div class="card-image card-image--1"></div>
+                    <h3>SaaS Analytics Platform</h3>
+                    <p>Real-time data visualization and reporting system for businesses to track key metrics.</p>
                     <a href="pages/projects.html" class="card-link">View Project →</a>
                 </div>
-                <div class="featured-card fade-in-up">
-                    <div class="card-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-                    <h3>Project Two</h3>
-                    <p>Interactive application with seamless user experience</p>
+                <div class="card scroll-animate">
+                    <div class="card-image card-image--2"></div>
+                    <h3>E-Commerce Redesign</h3>
+                    <p>Modern storefront redesign focusing on mobile-first experience and conversion optimization.</p>
                     <a href="pages/projects.html" class="card-link">View Project →</a>
                 </div>
-                <div class="featured-card fade-in-up">
-                    <div class="card-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-                    <h3>Project Three</h3>
-                    <p>Full-stack solution with responsive design</p>
+                <div class="card scroll-animate">
+                    <div class="card-image card-image--3"></div>
+                    <h3>Developer Tools</h3>
+                    <p>Open-source toolkit for streamlining development workflows and improving productivity.</p>
                     <a href="pages/projects.html" class="card-link">View Project →</a>
                 </div>
             </div>
@@ -91,12 +92,13 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Saransh. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" class="social-link">GitHub</a>
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">Twitter</a>
+        <div class="footer-container">
+            <p>&copy; 2026 Saransh. Built with vanilla HTML, CSS, and JavaScript.</p>
+            <div class="footer-links">
+                <a href="https://github.com/BuildWithSaransh" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+                <a href="https://linkedin.com/in/saransh" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+                <a href="https://twitter.com/saransh" target="_blank" rel="noopener noreferrer" class="footer-link">Twitter</a>
+                <a href="mailto:hello@saransh.dev" class="footer-link">Email</a>
             </div>
         </div>
     </footer>
